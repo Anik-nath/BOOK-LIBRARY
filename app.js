@@ -28,19 +28,20 @@ const displayArchive = archive => {
     numberOfResults.innerText = archive.length;
     
 
-    archive.forEach(element => {
-        console.log(element)
+    archive.forEach(books => {
+        console.log(books)
         
         const div =document.createElement('div');
         div.classList.add('col');
         div.innerHTML =`
             <div class="card h-100">
-            <img src="https://covers.openlibrary.org/b/id/${element.cover_i}-M.jpg" class="card-img-top" alt="book image">
+            <img src="https://covers.openlibrary.org/b/id/${books.cover_i}-M.jpg" class="card-img-top p-3" alt="book image">
             <div class="card-body">
-            <h5 class="card-title">${element.title}</h5>
-            <p id="author" class="card-text">Author : ${element.author_name}</p>
-            <p class="card-text">First Publish : ${element.first_publish_year}</p>
-            <p class="card-text">Publisher : ${element.publisher}</p>
+            <h4 class="card-title text-primary">${books.title}</h4>
+            <p id="author" class="card-text">Author : ${books.author_name}</p>
+            <p class="card-text">First Publish : ${books.first_publish_year}</p>
+            <p class="card-text">Publisher : ${books.publisher}</p>
+            <p class="card-text">Publisher Year: ${books.first_publish_year}</p>
             </div>
         </div>
         `;
