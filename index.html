@@ -16,28 +16,16 @@
             <div class="d-flex justify-content-center search-area">
                 <!-- search Area -->
                 <div class="input-group pb-5 w-50">
-                    <input type="text" class="form-control py-2 fs-5 border border-1 border-primary" placeholder="Book Name">
-                    <button id="button" type="button"  class="input-group-text btn btn-primary py-2 fs-5">Search</button>
+                    <input id="input-field" type="text" class="form-control py-2 fs-5 border border-1 border-primary" placeholder="Book Name">
+                    <button onclick="searchBook()" type="button"  class="input-group-text btn btn-primary py-2 fs-5">Search</button>
                 </div>
             </div>
             <!-- search result count -->
-            <h5 class="text-dark mb-4">Search result found... (<span>1012</span>) </h5>
+            <h5 class="text-dark mb-4">Search result found... (<span class="text-primary" id="numberOfResult"></span>) </h5>
             <!-- all results -->
-            <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div id="book-List" class="row row-cols-1 row-cols-md-3 g-4">
                 
-                <div class="col">
-                  <div class="card h-100">
-                    <img src="" class="card-img-top" alt="book image">
-                    <div class="card-body">
-                      <h5 class="card-title">Book name</h5>
-                      <p class="card-text">Author Name</p>
-                      <p class="card-text">First Publish</p>
-                      <p class="card-text">Publisher</p>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
+            </div>
        </div>
    </main>
     <!-- my script file -->
