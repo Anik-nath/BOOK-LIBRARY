@@ -1,11 +1,11 @@
 body{
-    background: url(img/book-walpaper.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-main{
-    background-color: rgba(199, 199, 199, 0.123);
-    backdrop-filter: blur(2px);
-    height: 100vh;
-}
+            background: url(img/book-walpaper.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        main{
+            background-color: rgba(199, 199, 199, 0.123);
+            backdrop-filter: blur(2px);
+            height: 100vh;
+        }

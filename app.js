@@ -24,13 +24,13 @@ const displayArchive = archive => {
    
     bookList.innerHTML = '';
 
-    // console.log(archive)
     numberOfResults.innerText = archive.length;
     
 
     archive.forEach(books => {
-        console.log(books)
-        
+        // console.log(books.publish_year)
+
+
         const div =document.createElement('div');
         div.classList.add('col');
         div.innerHTML =`
@@ -38,10 +38,10 @@ const displayArchive = archive => {
             <img src="https://covers.openlibrary.org/b/id/${books.cover_i}-M.jpg" class="card-img-top p-3" alt="book image">
             <div class="card-body">
             <h4 class="card-title text-primary">${books.title}</h4>
-            <p id="author" class="card-text">Author : ${books.author_name}</p>
-            <p class="card-text">First Publish : ${books.first_publish_year}</p>
-            <p class="card-text">Publisher : ${books.publisher}</p>
-            <p class="card-text">Publisher Year: ${books.first_publish_year}</p>
+            <p id="author" class="card-text">Author : ${typeof books.author_name === 'undefined'?'Author not found':books.author_name[0]}</p>
+            <p class="card-text">First Publish : ${typeof books.first_publish_year === 'undefined'?'Year Not Found':books.first_publish_year}</p>
+            <p class="card-text">Publisher : ${typeof books.publisher === 'undefined'?'Publiser not found':books.publisher[0]}</p>
+            <p class="card-text">Publish Year: ${typeof books.publish_year === 'undefined'?'Not Found':books.publish_year[0]}</p>
             </div>
         </div>
         `;
