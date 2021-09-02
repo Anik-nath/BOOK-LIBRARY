@@ -1,6 +1,7 @@
 let numberOfResults = document.getElementById('numberOfResult');
 const bookList = document.getElementById('book-List');
 
+//get data from url
 const searchBook = () =>{
     const inputField = document.getElementById('input-field');
     const searchText = inputField.value;
@@ -20,17 +21,16 @@ const searchBook = () =>{
     inputField.value = '';
 }
 
+//show finded books
 const displayArchive = archive => {
-   
+
     bookList.innerHTML = '';
 
-    numberOfResults.innerText = archive.length;
+    numberOfResults.innerText = archive.slice(0,20).length;
     
 
-    archive.forEach(books => {
-        // console.log(books.publish_year)
-
-
+    archive.slice(0,20).forEach(books => {
+    
         const div =document.createElement('div');
         div.classList.add('col');
         div.innerHTML =`
