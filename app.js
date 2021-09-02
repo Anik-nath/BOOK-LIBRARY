@@ -6,7 +6,7 @@ const searchBook = () =>{
     const inputField = document.getElementById('input-field');
     const searchText = inputField.value;
 
-    const url = `http://openlibrary.org/search.json?q=${searchText}`
+    const url = `https://openlibrary.org/search.json?q=${searchText}`
 
     if(inputField.value === ''){
        numberOfResults.innerText = "No Results Found";
@@ -34,7 +34,7 @@ const displayArchive = archive => {
         div.classList.add('col');
         div.innerHTML =`
             <div class="card h-100">
-            <img src="http://covers.openlibrary.org/b/id/${books.cover_i}-M.jpg" class="card-img-top p-3" alt="book image">
+            <img src="https://covers.openlibrary.org/b/id/${books.cover_i}-M.jpg" class="card-img-top p-3" alt="book image">
             <div class="card-body">
             <h4 class="card-title text-primary">${books.title}</h4>
             <p id="author" class="card-text">Author : ${typeof books.author_name === 'undefined'?'Author not found':books.author_name[0]}</p>
