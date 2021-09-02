@@ -9,7 +9,6 @@ const searchBook = () =>{
     const url = `http://openlibrary.org/search.json?q=${searchText}`
 
     if(inputField.value === ''){
-       console.log('empty')
        numberOfResults.innerText = "No Results Found";
        bookList.textContent = '';
     }
