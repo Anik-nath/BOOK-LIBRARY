@@ -5,7 +5,7 @@ body{
             background-attachment: fixed;
         }
         main{
-            background-color: rgba(199, 199, 199, 0.123);
-            backdrop-filter: blur(2px);
+            background-color: rgba(199, 199, 199, 0.431);
+            backdrop-filter: blur(4px);
             height: 100vh;
         }
