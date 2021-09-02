@@ -25,10 +25,10 @@ const displayArchive = archive => {
 
     bookList.innerHTML = '';
 
-    numberOfResults.innerText = archive.slice(0,20).length;
+    numberOfResults.innerText = archive.length;
     
 
-    archive.slice(0,20).forEach(books => {
+    archive.forEach(books => {
     
         const div =document.createElement('div');
         div.classList.add('col');
